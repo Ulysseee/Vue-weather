@@ -11,10 +11,7 @@
           v-model="query" 
           @keypress="fetchWeather"
         />
-        <!-- <div id="search-line" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''"></div> -->
       </div>
-
-      <!-- <div id="line" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''"></div> -->
 
       <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
@@ -90,18 +87,6 @@ export default {
 </script>
 
 <style>
-:root{
-  /*===== Colores =====*/
-  --first-color: #1A73E8;
-  --input-color: #80868B;
-  --border-color: #DADCE0;
-
-  /*===== Fuente y tipografia =====*/
-  --normal-font-size: 1rem;
-  --small-font-size: .75rem;
-}
-  
-
 *,
 *::before,
 *::after {
@@ -125,7 +110,6 @@ body {
 
 #app.warm {
   background-color: #DB3A34;
-  /* background-color: #DA2C38; */
   color: #e0e0e0;
 }
 
@@ -141,7 +125,6 @@ main {
   width: 100%;
   height: 1.25px;
   background-color: white;
-  /* transform: translateX(25px); */
 }
 
 #line.warm {
@@ -181,7 +164,6 @@ main {
   border: none;
   outline: none;
 
-  /* border-bottom: solid 1.5px black; */
 
   box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, .10);
   background-color: rgba(255, 255, 255, 0.7);
@@ -198,7 +180,6 @@ main {
   width: 100%;
   height: 1.25px;
   background-color: white;
-  /* transform: translateX(2px); */
 }
 
 #search-line.warm {
@@ -252,20 +233,6 @@ img {
   filter: drop-shadow(8px 8px 0px rgba(0,0,0,0.25));
 }
 
-/* .weather-box .sun{
-  background: center no-repeat url('./assets/sun.png');
-  background-size: 80%;
-}
-
-.weather-box .cloud{
-  background: center no-repeat url('./assets/cloud.png');
-  background-size: 95%;
-}
-
-.weather-box .rain{
-  background: center no-repeat url('./assets/rain.png');
-  background-size: 80%;
-} */
 
 .meteo {
   width: 70%;
@@ -288,9 +255,6 @@ img {
 
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 
-  /* background-color:rgba(255, 255, 255, 0.25);
-  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 16px; */
 }
 
 .weather-desc {
@@ -310,10 +274,8 @@ img {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  /* padding: 10px 25px;
 
   background-color:rgba(255, 255, 255, 0.25);
-  border-radius: 16px; */
 
   padding: 10px 15px;
   border-radius: 15px;
@@ -335,12 +297,6 @@ img {
   margin: 5px 0;
 
 }
-
-/* .precipitation-info {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
-} */
 
 .additional-info .weather {
   text-align: right;
