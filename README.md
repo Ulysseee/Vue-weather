@@ -1,4 +1,5 @@
 # vue-weather
+Vue-weather est application météo faisant appel au service en ligne d'Open Weather Map qui fournit des données météorologiques à échelle mondiale.
 
 ## Project setup
 ```
